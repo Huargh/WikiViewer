@@ -5,6 +5,7 @@ var buildURL = function(query) {
 $(document).keydown( function(event) {
   if (event.which === 13) {
 		var query = document.getElementById('searchquery').value;
+		$("#main").empty();
     event.preventDefault();
     $.ajax( {
       url: buildURL(query),
